@@ -1,0 +1,208 @@
+body{
+  margin:0;
+  padding:0;
+  max-width: 2000px;
+  background-color: black;
+  background: rgba(0,0,0,.6);
+}
+
+.image{
+  background-color: black;
+  height:70px;
+  padding: 0 0 0 0 ;
+  align:center;
+}
+
+.box{
+   width:300px;
+   padding: 0 20px 30px 20px;
+   justify-content: center;
+   position:absolute;
+   top: 55%;
+   left: 30%;
+   text-align: center;
+   align-items: center;
+   transform: translate(-50%,-50%);
+   background-color: black;
+   background: rgba(0,0,0,.6);
+   border-radius: 40px;
+}
+.box input.txt{
+  margin: 10px;
+  width: 250px;
+  outline: none;
+  padding: 10px;
+  display: block;
+  background: transparent;
+  border: 2px solid grey;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.box input.txt:hover{
+  border: 2px solid white;
+}
+.box input.txt:focus{
+  border: 2px solid red;
+}
+
+.radio{
+  font-size: 15px;
+  font-weight: 200px;
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: middle;
+  color: grey;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.radio + .radio{
+  margin-left: 30px;
+}
+.radio input[type="radio"]{
+  display: none;
+}
+.radio span{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 2px solid red;
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.radio span:after{
+  content: "";
+  height: 8px;
+  width:8px;
+  background: grey;
+  display: block;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%) scale(0);
+  border-radius: 50%;
+  transition: 500ms easy-in-out 1s;
+}
+.radio input[type="radio"]:checked ~ span:after{
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.division{
+  margin: 0;
+  padding: 0 0 0 10px;
+  width: 100px;
+  height: 0px;
+}
+.select{
+  width:140px;
+  margin:0;
+  padding: 0 0 0 120px;
+}
+.selectbox{
+  width:150px;
+  outline:none;
+  background:black;
+  position: relative;
+  border:2px solid grey;
+  border-radius: 8px;
+}
+.selectbox select{
+  height: 20px;
+  width: 100%;
+  color: grey;
+  padding:0;
+  font-size: 15px;
+  line-height: 22px;
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  background:black;
+  appearance:none;
+}
+.selectbox:after{
+
+   position: absolute;
+   right:6px;
+   top:45%;
+   margin-top: -5px;
+   border-top: 8px solid green;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+}
+.selectbox select:focus{
+  border:2px solid green;
+  background: transparent;
+}
+
+.course{
+  width:500px;
+  height: 400px;
+  padding: 0 20px 30px 20px;
+  justify-content: center;
+  position:absolute;
+  top: 50%;
+  left:70%;
+  text-align: center;
+  align-items: center;
+  transform: translate(-50%,-50%);
+  background-color: black;
+  background: rgba(0,0,0,.6);
+  border-radius: 40px;
+}
+.container{
+  max-width: 1200px;
+  margin:10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: right;
+}
+.container div{
+  margin: 10px;
+}
+.container div label{
+  cursor:pointer;
+}
+.container div label input[type="checkbox"]{
+  display:none;
+}
+.container div label span{
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  padding:05px 10px;
+  color: grey;
+  border-radius: 30px;
+  border: 2px solid grey;
+  font-size: 13px;
+  transition: 0.25s;
+  user-select: none;
+  overflow: hidden;
+}
+.container div label span:before{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 0%;
+  background: white;
+}
+.container div label input[type="checkbox"]:checked~span{
+   background: green;
+   color: white;
+ }
+ .container div label span:hover{
+   position: relative;
+   margin: 0;
+   display: inline-block;
+   padding:05px 10px;
+   color: white;
+   border-radius: 30px;
+   background: red;
+   font-size: 13px;
+   transition: 0.25s;
+   user-select: none;
+   overflow: hidden;
+ }
